@@ -89,8 +89,34 @@ findtime = 10m
 bantime = 1h
 EOF
 
+
+
+
+
+
+
 systemctl enable fail2ban
 systemctl restart fail2ban
+
+for i in {1..5}; do
+    if fail2ban-client ping >/dev/null 2>&1; then
+        break
+    fi
+    sleep 1
+done
+
+echo ""
+echo "Fail2Ban:"
+fail2ban-client status sshd || systemctl status fail2ban --no-pager -l
+
+
+
+
+
+
+
+
+
 
 # Бэкап SSH-конфига
 echo "==> Резервная копия sshd_config"
