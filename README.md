@@ -19,8 +19,7 @@
 
 ```wget -O install.sh https://raw.githubusercontent.com/Denis33674/xray-vless-reality-installer-v2/main/xray-install && chmod +x install.sh && ./install.sh | bash```
 
-```sh
-wget -qO- https://raw.githubusercontent.com/ServerTechnologies/simple-xray-core/refs/heads/main/xray-install | bash
+```wget -O install.sh https://raw.githubusercontent.com/Denis33674/xray-vless-reality-installer-v2/main/xray-install && chmod +x install.sh && ./install.sh | bash
 ```
 
 ## Команды для управления пользователями
