@@ -17,12 +17,7 @@
 Как пользоваться скриптом
 Скрипт создавался и тестировался под ОС Ubuntu 22 x64 и Ubuntu 24 x64. На других ОС может работать некорректно. Чтобы скачать и запустить скрипт, используйте эту команду:
 
-wget -qO- https://raw.githubusercontent.com/Denis33674/xray-vless-reality-installer-v2/main/xray-install | bash
-
-
-wget -O install.sh https://raw.githubusercontent.com/Denis33674/xray-vless-reality-installer-v2/main/xray-install
-chmod +x install.sh
-./install.sh
+wget -O install.sh https://raw.githubusercontent.com/Denis33674/xray-vless-reality-installer-v2/main/xray-install && chmod +x install.sh && ./install.sh
 
 
 Команды для управления пользователями
