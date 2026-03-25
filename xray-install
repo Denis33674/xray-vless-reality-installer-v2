@@ -2,7 +2,7 @@
 
 
 
-echo "Проверяем готовность сервера..."
+echo -e "\033[1;33mПроверяем готовность сервера...\033[0m"
 
 if command -v cloud-init >/dev/null 2>&1; then
   while true; do
