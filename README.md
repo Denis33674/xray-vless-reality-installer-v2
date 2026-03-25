@@ -15,7 +15,7 @@ VPS для панели
 
 Скрипт создавался и тестировался под ОС Ubuntu 22 x64 и Ubuntu 24 x64. На других ОС может работать некорректно. Чтобы скачать и запустить скрипт, используйте эту команду:
 
-wget -qO- https://raw.githubusercontent.com/Denis33674/xray-vless-reality-installer/main/xray-install | bash
+wget -qO- https://raw.githubusercontent.com/Denis33674/xray-vless-reality-installer-v2/main/xray-install | bash
 
 Команды для управления пользователями
 
