@@ -373,6 +373,3 @@ cat << 'EOF' > $HOME/help
 
 EOF
 
-    systemctl restart xray
-
-EOF
