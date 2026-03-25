@@ -37,8 +37,8 @@ fi
 
 printf '\033[0;36m%s\033[0m\n' "===> Установка пакетов <==="
 apt update
-apt install -y ufw fail2ban
 apt install qrencode curl jq -y
+apt install -y ufw fail2ban
 
 printf '\033[0;36m%s\033[0m\n' "===> Смена пароля root <==="
 passwd root
