@@ -27,12 +27,9 @@ while pgrep -x apt >/dev/null || pgrep -x apt-get >/dev/null || pgrep -x dpkg >/
   sleep 3
 done
 
+
+
 echo "Сервер готов к установке"
-
-
-
-
-
 
 set -e
 export DEBIAN_FRONTEND=noninteractive
@@ -46,12 +43,6 @@ if ! command -v apt >/dev/null 2>&1; then
 fi
 apt update
 apt install -y qrencode curl jq
-
-
-
-
-
-
 
 
 
@@ -89,12 +80,6 @@ findtime = 10m
 bantime = 1h
 EOF
 
-
-
-
-
-
-
 systemctl enable fail2ban
 systemctl restart fail2ban
 
@@ -108,15 +93,6 @@ done
 echo ""
 echo "Fail2Ban:"
 fail2ban-client status sshd || systemctl status fail2ban --no-pager -l
-
-
-
-
-
-
-
-
-
 
 # Бэкап SSH-конфига
 echo "==> Резервная копия sshd_config"
@@ -189,27 +165,7 @@ fail2ban-client status sshd || true
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Включаем BBR
-# Включаем bbr
 bbr=$(sysctl -a | grep net.ipv4.tcp_congestion_control)
 if [ "$bbr" = "net.ipv4.tcp_congestion_control = bbr" ]; then
 echo "bbr уже включен"
@@ -219,21 +175,6 @@ echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 sysctl -p
 echo "bbr включен"
 fi
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -289,14 +230,6 @@ if [[ -z "$uuid" || -z "$privatkey" || -z "$shortsid" ]]; then
   echo "Ошибка: не удалось прочитать ключи Xray" >&2
   exit 1
 fi
-
-
-
-
-
-
-
-
 
 touch /usr/local/etc/xray/config.json
 cat <<EOF > /usr/local/etc/xray/config.json
@@ -388,26 +321,6 @@ cat <<EOF > /usr/local/etc/xray/config.json
   }
 }
 EOF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Исполняемый файл для списка клиентов
 touch /usr/local/bin/userlist
